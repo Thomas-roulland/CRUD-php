@@ -12,12 +12,7 @@ include "StructurePage/header.php";
          </div>
 
         <!-- Button trigger modal -->
-        <div class="d-flex justify-content-end mx-5">
-        <button type="button" class="btn btn-primary mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Ajoutez une organisation
-        </button>
-        </div>
-
+   
        
 
 
@@ -27,7 +22,11 @@ include "StructurePage/header.php";
         if($_GET['page']==1){
             $statement=connect('groups')->query("SELECT * FROM Organization");
             ?>
-             <!-- Modal -->
+             <div class="d-flex justify-content-end mx-5">
+        <button type="button" class="btn btn-primary mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Ajoutez une organisation
+        </button>
+        </div>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -104,6 +103,11 @@ include "StructurePage/header.php";
         $statement=connect('groups')->query("SELECT * FROM User");
         $organisation = connect('groups')->query("SELECT * FROM Organization");
         ?>
+<div class="d-flex justify-content-end mx-5">
+        <button type="button" class="btn btn-primary mb-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Ajoutez un User
+        </button>
+        </div>
          <!-- Modal -->
          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
